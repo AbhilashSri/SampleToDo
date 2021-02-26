@@ -1,0 +1,12 @@
+<h1>Todo List</h1>
+<div>
+    <input type="text" #newTodo />
+    <button (click)="addTodo(newTodo.value, false);newTodo.value='';">Add</button>
+</div>
+<hr />
+<table>
+    <tr *ngFor="let todo of ToDoList">
+        <td>{{todo.Title}}</td>
+        <td>{{todo.IsCompleted ? '&#10003;' : '&#10005;'}}</td>
+    </tr>
+</table>
